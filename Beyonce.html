@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <title>Escapa del SAT</title>
+</head>
+<body>
+
+    <h1>¡Escapa del SAT!</h1>
+
+    <div id="contenedor">
+
+        <div id="game-area">
+
+            <!-- jugador SAT -->
+            <div id="player" class="character">
+                <img src="Imagenes/deudor_sat.png" alt="SAT">
+            </div>
+
+            <!-- perseguidorDeudor -->
+            <div id="deudor" class="character">
+                <img src="Imagenes/sat.jpeg" alt="Deudor del SAT">
+            </div>
+
+            <!-- mensaje de derrota -->
+            <div id="mensaje" class="oculto">
+                <p>¡¡¡El SAT te encontro!!!</p>
+                <button id="reintentar">Reintentar</button>
+            </div>
+
+        </div>
+
+        <!-- panel de configuracion -->
+        <aside id="settings">
+
+            <h2>Configuración</h2>
+
+            <label>
+                Velocidad del SAT:
+                <span id="playerSpeedValue">3</span>
+                <input type="range" id="playerSpeedInput"
+                    min="1" max="10" step="1" value="3">
+            </label>
+
+            <label>
+                Velocidad del deudor:
+                <span id="deudorSpeedValue">1</span>
+                <input type="range" id="deudorSpeedInput"
+                    min="0.5" max="5" step="0.5" value="1">
+            </label>
+
+            <label>
+                Color de fondo:
+                <input type="color" id="bgColorInput" value="#f0f0f0">
+            </label>
+
+            <label class="fila">
+                <input type="checkbox" id="musicToggle">
+                Música
+            </label>
+
+            <label>
+                Volumen:
+                <span id="volumeValue">50</span>%
+                <input type="range" id="volumeInput"
+                    min="0" max="100" step="5" value="50">
+            </label>
+
+        </aside>
+
+    </div>
+
+    <!-- musica -->
+    <audio id="music" src="Audio/musica.mp3" loop></audio>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

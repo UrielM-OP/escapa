@@ -1,0 +1,129 @@
+
+/* estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* contenedor */
+#contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* area del juego */
+#game-area {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+/* personajes */
+.character {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/* imagenes de los personajes */
+#player img,
+#deudor img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
+
+/* facturas como obstaculos */
+.obstaculo {
+    position: absolute;
+    background-image: url('Imagenes/factura.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+/* panel de configuracion */
+#settings {
+    width: 240px;
+    padding: 15px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    text-align: left;
+    background-color: #fafafa;
+}
+
+#settings h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#settings label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+#settings input[type="range"] {
+    width: 100%;
+}
+
+/* control de musica */
+#settings .fila {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* mensaje de derrota */
+#mensaje {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+#mensaje p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* boton de reinicio */
+#mensaje button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d62828;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#mensaje button:hover {
+    background-color: #a4161a;
+}
+
+/* ocultar mensaje */
+#mensaje.oculto {
+    display: none;
+}
